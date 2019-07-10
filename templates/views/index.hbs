@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="/css/styles.css">
+        {{>styles}}
+    </head>
+    <body>
+        {{>header}}
+        <div class="container">
+            <h1>{{title}}</h1>
+            <p class="lead">
+            Enter a location to find the forecast for your area!
+            </p>
+
+            <form id="locationForm" class="form-inline">
+                <div class="row text-danger d-none" id="formError"></div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="location" aria-describedby="locationHelp" placeholder="Enter Location" size="60" required>
+                            <small id="locationHelp" class="form-text text-muted">Enter the full or partial name of the location</small>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <button id="locationSubmit" type="submit" class="btn btn-primary btn-lg">Search</button>
+                    </div>
+                </div>              
+            </form>
+
+            <div class="row mt-4 d-none" id="forecastCard">
+                <div class="card bg-info text-white" style="width:40rem;">
+                    <div class="card-header text-center" id="cardLocation">
+                    </div>
+                    <div class="card-body">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-auto text-center">
+                                <h1 class="display-2 d-inline" id="cardTemp"></h1>
+                                <h6 class="d-inline">&#8457</h6>
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="card-title mb-2" id="cardSummary"></h5>
+                                <p class="card-text"><small class="text-white-70" id="cardPrecip"></small></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>                                
+            </div>
+
+        </div>        
+        {{>footer}}
+        {{>scripts}}
+        <script type="text/javascript" src="/js/scripts.js"></script>
+    </body>    
+</html>
