@@ -7,7 +7,6 @@ const forecastCard = document.querySelector('#forecastCard')
 
 const cardLocation = document.querySelector('#cardLocation')
 const cardTemp = document.querySelector('#cardTemp')
-// const cardLatLong = document.querySelector('#cardLatLong')
 const cardSummary = document.querySelector('#cardSummary')
 const cardPrecip = document.querySelector('#cardPrecip')
 
@@ -27,14 +26,13 @@ locationForm.addEventListener('submit', (e) => {
         fetch(searchUrl).then((res) => {
             res.json().then((data) => {
                 if (data.error) {
-                    formError.innerHTML = `<p>${data.error}</p>`
+                    formError.innerHTML = `<div class="col-md" ><p>${data.error}</p></div>`
                     showElement(formError)
                 } else {
                     cardLocation.innerHTML = `${data.place_name}`
-                    // cardLatLong.innerHTML = `Latitude: ${data.latitude}, Longitude: ${data.longitude}`
                     cardSummary.innerHTML = `${data.summary}`
                     cardTemp.innerHTML = `${data.current_temp.toFixed(0)}`
-                    cardPrecip.innerHTML = `${data.current_precip}% of precipitation`
+                    cardPrecip.innerHTML = `${data.current_precip}% chance of precipitation`
 
                     showElement(forecastCard)
                 }

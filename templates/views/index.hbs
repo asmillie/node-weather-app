@@ -11,25 +11,28 @@
     <body>
         {{>header}}
         <div class="container">
-            <h1>{{title}}</h1>
-            <p class="lead">
-            Enter a location to find the forecast for your area!
-            </p>
 
-            <form id="locationForm" class="form-inline">
-                <div class="row text-danger d-none" id="formError"></div>
-                <div class="row">
-                    <div class="col-md">
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" id="location" aria-describedby="locationHelp" placeholder="Enter Location" size="60" required>
-                            <small id="locationHelp" class="form-text text-muted">Enter the full or partial name of the location</small>
+            <div class="jumbotron mt-3">
+                <h1 class="my-2 display-3">{{title}}</h1>
+                <p class="lead">
+                Enter a location to find the forecast for your area!
+                </p>
+                <hr class="my-4">
+                <form id="locationForm" class="form-inline">
+                    <div class="row text-danger d-none" id="formError"></div>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" id="location" aria-describedby="locationHelp" placeholder="Enter Location" size="60" required>
+                                <small id="locationHelp" class="form-text text-muted">Enter the full or partial name of the location</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md">
-                        <button id="locationSubmit" type="submit" class="btn btn-primary btn-lg">Search</button>
-                    </div>
-                </div>              
-            </form>
+                        <div class="col-md">
+                            <button id="locationSubmit" type="submit" class="btn btn-primary btn-lg">Search</button>
+                        </div>
+                    </div>              
+                </form>
+            </div>           
 
             <div class="row mt-4 d-none" id="forecastCard">
                 <div class="card bg-info text-white" style="width:40rem;">
