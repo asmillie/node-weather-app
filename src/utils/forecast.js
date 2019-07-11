@@ -1,5 +1,4 @@
 const request = require('request')
-const apiKeys = require('../api-keys')
 
 /**
  * Darksky API Config
@@ -7,7 +6,7 @@ const apiKeys = require('../api-keys')
  */
 const DARKSKY_API_BASE_URL = 'https://api.darksky.net/'
 const DARKSKY_API_FORECAST_URL = 'forecast/'
-const apiKey = process.env.DARKSKY_API_KEY | apiKeys.DARKSKY_API_KEY
+const apiKey = process.env.DARKSKY_API_KEY
 
 const getForecastByGeocode = (latitude, longitude, callback) => {
     const url = DARKSKY_API_BASE_URL + DARKSKY_API_FORECAST_URL + apiKey + `/${latitude}, ${longitude}`

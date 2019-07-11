@@ -1,11 +1,10 @@
 const request = require('request')
-const apiKeys = require('../api-keys')
 
 /**
  * Mapbox API Config
  * https://docs.mapbox.com
  */
-const apiKey = process.env.MAPBOX_API_KEY | apiKeys.MAPBOX_API_KEY
+const apiKey = process.env.MAPBOX_API_KEY
 const MAPBOX_API_BASE_URL = 'https://api.mapbox.com'
 const MAPBOX_API_GEOCODING_URL = '/geocoding/v5/'
 const MAPBOX_API_ENDPOINT_PARAM = 'mapbox.places/'
