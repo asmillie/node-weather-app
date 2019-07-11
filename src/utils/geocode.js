@@ -1,4 +1,5 @@
 const request = require('request')
+const apiKeys = require('../api-keys')
 
 /**
  * Mapbox API Config
@@ -50,7 +51,7 @@ const getMapboxReqURLForLocation = (location) => {
     + encodeURIComponent(location)
     + MAPBOX_API_LOCATION_EXT
     + MAPBOX_API_KEY_PARAM
-    + MAPBOX_API_KEY
+    + apiKeys.MAPBOX_API_KEY
     + MAPBOX_API_LIMIT
 }
 
