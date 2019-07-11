@@ -18,7 +18,7 @@ locationForm.addEventListener('submit', (e) => {
     locationSubmit.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Searching...'
 
     const location = locationInput.value
-    const searchUrl = `http://localhost:3000/forecast?location=${location}`
+    const searchUrl = `/forecast?location=${location}`
 
     if (location === '') {
         locationSubmit.innerHTML = 'Search'

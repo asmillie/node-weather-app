@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 //Express Instance & Config
 const app = express()
+const port = process.env.PORT || 3000 // Sets port provided by Heroku or 3000 for local dev
 app.set('view engine', 'hbs')
 
 //Define paths for Express config
@@ -71,6 +72,6 @@ app.get('*', (req, res) => {
 })
 
 //Start server and run on provided port
-app.listen(3000, () => {
-    console.log('Express server running on port 3000')
+app.listen(port, () => {
+    console.log('Express server running on port ' + port)
 })
