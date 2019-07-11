@@ -66,10 +66,6 @@ app.get('/forecast', (req, res) => {
     })
 })
 
-app.get('/help/*', (req, res) => {
-    res.render('404-help')
-})
-
 app.get('*', (req, res) => {
     res.render('404')
 })
